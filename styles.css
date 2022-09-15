@@ -40,7 +40,7 @@ header{
     list-style: none;
     padding: 0.9rem; 
     margin: -0.9rem;
-    border-radius: 3rem;
+    border-radius: 5rem;
 }
 
 .list-item:nth-child(odd):hover{
@@ -81,7 +81,7 @@ header{
 
 .hero-image{ /* Hacer que Desaparecezca cuando la pantalla es muy chica */
     margin: auto 3rem 3rem 3rem;
-    max-width: 60%;
+    max-width: 50%;
 }
 
 /* BOOKS */
@@ -189,3 +189,36 @@ footer{
     margin-left: 0.7rem;
 }
 
+@media (max-width: 1700px){
+    :root{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1500px){
+    :root{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1300px){
+    :root{
+        font-size: 10px;
+    }
+
+    .contact-ways{
+        align-items: center;
+    }
+}
+
+@media (max-width: 700px){
+    .hero-image{
+        display: none;
+    }
+
+    .slogan{
+        margin: 2rem;
+    }
+
+   
+}
