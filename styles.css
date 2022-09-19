@@ -18,13 +18,15 @@
     color: black;
 }
 
+/* HEADER */
+
 header{
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
 }
 
-.navbar{
+.navbar{ /* CORREGIR TAMANO POR RESPONSIVE */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -55,6 +57,10 @@ header{
     height: 1.5rem;
 }
 
+.browser-cont i{
+    margin-left: 1rem;
+}
+
 .logo{
     width: 60%;
     margin: 4rem auto;
@@ -73,20 +79,36 @@ header{
 }
 
 .slogan{
-    font-family: 'Noto Serif Georgian', serif;
-    font-size: 3rem;
-    text-align: justify;
-    margin: auto auto auto 3rem;
+    display: flex;
+    flex-direction: column;
 }
 
-.hero-image{ /* Hacer que Desaparecezca cuando la pantalla es muy chica */
+.phrase{
+    font-family: 'Noto Serif Georgian', serif;
+    font-size: 4rem;
+    text-align: center;
+    margin: auto auto auto 3rem;
+    color: rgb(45, 45, 45);
+}
+
+.autor{
+    font-size: 2rem;
+    font-family: 'Noto Serif Georgian', serif;
+    color: rgb(45, 45, 45);
+    text-align: end;
+    margin-top: -1rem;
+    margin-bottom: 3rem;
+}
+
+.hero-image{ 
     margin: auto 3rem 3rem 3rem;
     max-width: 50%;
+    box-shadow: 6px 6px 6px lightgray;
 }
 
 /* BOOKS */
 
-.book-section{
+#book-section{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
@@ -94,12 +116,18 @@ header{
     place-items: center;
     width: 100%;
     height: 100%;
+    background-color: var(--lightblue);
 }
 
 .book-images{
     width: 70%;
-    height: 100%;
+    height: 90%;
+    box-shadow: 15px 15px 10px black;
 }
+
+/* .book-images:hover{
+    filter: blur(5px);
+} */
 
 .book-images img{ 
     width: 100%;
@@ -109,7 +137,7 @@ header{
 
 /* CONTACT */
 
-.contact-section{
+#contact-section{
     display: flex;
     flex-direction: column;
     place-items: center;
@@ -121,6 +149,11 @@ header{
     justify-content: start;
 }
 
+.invitation h2{
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
 .contact{
     font-size: 3rem;
     margin-top: 1.5em;
@@ -128,6 +161,11 @@ header{
 
 .contact-descript{
     font-size: 2rem;
+    margin-top: 4rem;
+}
+
+.bi-box-arrow-up-right{
+    margin-left: 0.5rem;
 }
 
 .conditions{
@@ -173,7 +211,7 @@ footer{
 }
 
 .sections-list{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .sections-list ul li{
@@ -212,6 +250,11 @@ footer{
 }
 
 @media (max-width: 700px){
+    .book-section{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
     .hero-image{
         display: none;
     }
@@ -221,4 +264,11 @@ footer{
     }
 
    
+}
+
+@media (max-width: 500px){
+    .book-section{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
 }
