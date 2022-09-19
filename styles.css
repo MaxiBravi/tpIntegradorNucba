@@ -71,6 +71,19 @@ header{
 
 /* HERO */
 
+@keyframes aparecer {
+
+    from{
+        opacity: 0;
+        color: white;
+    }
+
+    to{
+        opacity: 1;
+        color: rgb(45, 45, 45);;
+    }
+}
+
 .hero{
     display: flex;
     width: 100%;
@@ -84,17 +97,19 @@ header{
 }
 
 .phrase{
+    animation: aparecer 4s linear 0s 1 forwards;
     font-family: 'Noto Serif Georgian', serif;
     font-size: 4rem;
     text-align: center;
     margin: auto auto auto 3rem;
-    color: rgb(45, 45, 45);
+    color: white;
 }
 
 .autor{
+    animation: aparecer 4s linear 1s 1 forwards;
     font-size: 2rem;
     font-family: 'Noto Serif Georgian', serif;
-    color: rgb(45, 45, 45);
+    color: white;
     text-align: end;
     margin-top: -1rem;
     margin-bottom: 3rem;
@@ -125,9 +140,21 @@ header{
     box-shadow: 15px 15px 10px black;
 }
 
-/* .book-images:hover{
-    filter: blur(5px);
-} */
+#book-section:hover .book-images{
+    opacity: .5;
+    filter: blur(2px);
+}
+
+#book-section .book-images:hover{
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.book:hover{
+    border-radius: 5px;
+    transform: scale(1.1);
+    box-shadow: 45px 45px 30px black;
+}
 
 .book-images img{ 
     width: 100%;
