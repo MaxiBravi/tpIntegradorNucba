@@ -26,6 +26,7 @@
 /* HEADER */
 
 header{
+    width: 100%;
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -43,18 +44,18 @@ header{
     gap: 10em;
 }
 
-.list-item{
+.nav-list a{
     list-style: none;
     padding: 0.9rem; 
     margin: -0.9rem;
     border-radius: 5rem;
 }
 
-.list-item:nth-child(odd):hover{
+.nav-list a:nth-child(odd):hover{
     background-color: var(--green);
 }
 
-.list-item:nth-child(even):hover{
+.nav-list a:nth-child(even):hover{
     background-color: var(--orange); 
 }
 
@@ -62,10 +63,22 @@ header{
     height: 1.5rem;
 }
 
+.browser-cont input{
+    outline: none;
+}
+
+.browser-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
 .browser-cont i{
     margin-left: 1rem;
 }
 
+ 
 .logo{
     width: 60%;
     margin: 4rem auto;
@@ -264,11 +277,18 @@ footer{
 }
 
 .sections-list{
-    font-size: 0.8rem;
+    font-size: 1rem;
+}
+
+.sections-list ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
 }
 
 .sections-list ul li{
     list-style: none;
+    margin: 1ch 2ch 1ch 2ch;
 }
 
 .sections-list ul li:hover{
@@ -302,8 +322,27 @@ footer{
     }
 }
 
+@media (max-width: 1100px){
+    :root{
+        font-size: 8px;
+    }
+
+    .browser{
+        width: 70%;
+    }
+}
+
+@media (max-width: 950px){
+    .browser{
+        width: 40%;
+    }
+    .nav-list{
+        gap: 7em;
+    }
+}
+
 @media (max-width: 700px){
-    .book-section{
+    #book-section{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(4, 1fr);
     }
@@ -313,15 +352,26 @@ footer{
     }
 
     .slogan{
-        margin: 2rem;
+        margin-top: 2rem;
+        margin-right: 3rem;
     }
 
-   
+    .nav-list{
+        gap: 5em;
+    }
+
+    #contact-section{
+        margin-top: 3rem;
+    }
 }
 
 @media (max-width: 500px){
-    .book-section{
+    #book-section{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, 1fr);
+    }
+
+    .nav-list{
+        gap: 4em;
     }
 }
