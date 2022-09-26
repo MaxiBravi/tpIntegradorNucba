@@ -208,6 +208,10 @@ main{
     flex-direction: column;
     gap: 3rem;
   }
+
+  body{
+    overflow: scroll;
+  }
 }
 
 @media (max-width: 620px){
