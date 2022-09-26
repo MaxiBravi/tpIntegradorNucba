@@ -363,6 +363,22 @@ footer{
     #contact-section{
         margin-top: 3rem;
     }
+
+    .navbar{
+        flex-direction: column;
+    }
+
+    .browser-cont{
+        margin-top: 5rem;
+    }
+
+    .browser-cont input{
+        width: 100%;
+    }
+
+    footer{
+        justify-content: space-evenly;
+    }
 }
 
 @media (max-width: 500px){
@@ -373,5 +389,9 @@ footer{
 
     .nav-list{
         gap: 4em;
+    }
+
+    .copyright{
+        margin-left: 2rem;
     }
 }
